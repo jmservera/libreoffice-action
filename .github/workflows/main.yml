@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - uses: ./
+      - uses: jmenterprisedemo/libreoffice-action@v0.2
         name: run-libreoffice
         id: libreoffice
         with:
