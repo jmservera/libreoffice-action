@@ -13,7 +13,7 @@ This action runs any command inside the libreoffice base image
 ## Usage
 
 ```yaml
-uses: actions/libreoffice-action@v1
+uses: jmservera/libreoffice-action@v0.2
 with:
   # Required, the command to run
   command: libreoffice --headless --invisible --convert-to pdf 'originalfile.pptx' --outdir 'output'
