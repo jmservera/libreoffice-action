@@ -1,0 +1,21 @@
+name: Test
+
+# Controls when the workflow will run
+on:
+  push:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  createpdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - uses: ./
+        name: run-libreoffice
+        id: libreoffice
+        with:
+          # Required, the command to run
+          command: libreoffice --headless --invisible --convert-to pdf 'README.md' --outdir 'output'
