@@ -1,6 +1,8 @@
 # action.yml
 name: 'Libreoffice Convert'
 description: 'Run libreoffice in headless mode'
+icon: printer
+color: yellow
 inputs:
   command:  # id of input
     description: 'The command to run'
