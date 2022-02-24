@@ -17,4 +17,6 @@ jobs:
         id: libreoffice
         with:
           # Required, the command to run
-          command: libreoffice --headless --invisible --convert-to pdf 'README.md' --outdir 'output'
+          command: |
+            libreoffice --headless --invisible --convert-to pdf 'README.md' --outdir 'output'
+            libreoffice --headless --invisible --convert-to png 'README.md' --outdir 'output'
