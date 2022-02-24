@@ -1,0 +1,13 @@
+# action.yml
+name: 'Libreoffice Convert'
+description: 'Run libreoffice in headless mode'
+inputs:
+  command:  # id of input
+    description: 'The command to run'
+    required: true
+    default: 'libreoffice --headless --invisible --version'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
