@@ -1,5 +1,7 @@
 # Libreoffice cli action
 
+> This is a preview version, it may not work as expected.
+
 This action runs any command inside the libreoffice base image
 
 ## Inputs
