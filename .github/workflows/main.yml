@@ -2,7 +2,6 @@ name: Test
 
 # Controls when the workflow will run
 on:
-  push:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -13,9 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
-      - uses: ./
+      - uses: jmenterprisedemo/libreoffice-action@v0.2
         name: run-libreoffice
         id: libreoffice
         with:
           # Required, the command to run
-          command: libreoffice --headless --invisible --convert-to pdf 'README.md' --outdir 'output'
+          command: |
+            libreoffice --headless --invisible --convert-to pdf 'README.md' --outdir 'output'
+            libreoffice --headless --invisible --convert-to png 'README.md' --outdir 'output'
