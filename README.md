@@ -6,7 +6,7 @@ This action runs any command inside the libreoffice base image
 
 ## Inputs
 
-## `command`
+### `command`
 
 **Required** The command line to run. Default `libreoffice --headless --invisible --version`.
 
